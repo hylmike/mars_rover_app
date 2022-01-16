@@ -1,0 +1,27 @@
+{
+  "name": "mars_rover_app",
+  "version": "1.0.0",
+  "description": "Mars rover code challenge",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "mars_rover_app"
+  },
+  "author": "Michael",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.8",
+    "babel-jest": "^27.4.6",
+    "jest": "^27.4.7",
+    "mock-stdin": "^1.0.0",
+    "regenerator-runtime": "^0.13.9"
+  },
+  "dependencies": {
+  }
+}
