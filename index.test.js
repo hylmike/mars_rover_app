@@ -1,8 +1,8 @@
 import { spawn } from 'child_process';
 
-const output = (process) =>{
+const output = (fn) =>{
   return new Promise((resolve, reject)=>{
-    process.stdout.on('data', data => resolve(data));
+    fn.stdout.on('data', data => resolve(data));
   })
 }
 
