@@ -65,7 +65,7 @@ const main = async () => {
   roverList.forEach((item) => console.log(`${item.name}: ${item.info.position.x} ${item.info.position.y} ${item.info.compassPoint}`));
 
   rl.close();
-  console.log('Connection closed, Bye!')
+  console.log('App closed, Bye!');
   process.exit(0);
 }
 
