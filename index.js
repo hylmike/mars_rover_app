@@ -5,14 +5,14 @@ import checkInput from './stdio/dataValidation.js';
 
 //Wrap readline.question with Promise, then later we can use await to call them sequentially
 const askQuestion = (question) => {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     rl.question(question, (answer) => resolve(answer))
   });
 }
 
 //Wrap readline.on with Promise, to simplify the code structure
 const onLineInput = () => {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     rl.on('line', (input) => resolve(input));
   })
 }

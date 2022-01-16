@@ -35,7 +35,6 @@ const checkInput = {
 const validCommand = (commandList, curPos, plot) => {
   let direction = ['E', 'S', 'W', 'N', 'E'];
   let x = curPos[0], y = curPos[1], dir = curPos[2];
-  let outOfPlot = false;
   for (let i = 0; i < commandList.length; i++) {
     switch (commandList[i]) {
       case 'M':
