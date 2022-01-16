@@ -10,12 +10,14 @@ const askQuestion = (question) => {
   });
 }
 
+//Wrap readline.on with Promise, to simplify the code structure
 const onLineInput = () => {
   return new Promise((resolve, reject) => {
     rl.on('line', (input) => resolve(input));
   })
 }
 
+//Function for rover steering, also check if steering command is safe or not
 const steerRover = async (rover, [platLength, platWidth]) => {
   let commands = await askQuestion(`${rover.info.name} Instructions: `);
   while (!checkInput.roverCommands(
