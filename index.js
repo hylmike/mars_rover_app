@@ -74,7 +74,7 @@ const main = async () => {
     await steerRover(roverList[i], [landPlateau.size.length, landPlateau.size.width]);
   }
 
-  roverList.forEach((item) => console.log(`${item.name}: ${item.info.position.x} ${item.info.position.y} ${item.info.compassPoint}`));
+  roverList.forEach((item) => console.log(`${item.info.name}: ${item.info.position.x} ${item.info.position.y} ${item.info.compassPoint}`));
 
   let contInd = true;
   while (contInd) {
@@ -88,7 +88,7 @@ const main = async () => {
       for (let i = 0; i < roverList.length; i++) {
         await steerRover(roverList[i], [landPlateau.size.length, landPlateau.size.width]);
       }
-      roverList.forEach((item) => console.log(`${item.name}: ${item.info.position.x} ${item.info.position.y} ${item.info.compassPoint}`));
+      roverList.forEach((item) => console.log(`${item.info.name}: ${item.info.position.x} ${item.info.position.y} ${item.info.compassPoint}`));
     }
   }
 
