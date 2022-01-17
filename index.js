@@ -2,6 +2,7 @@ import rl from './stdio/readTerminal.js';
 import Plateau from './rover/Plateau.js';
 import Rover from './rover/Rover.js';
 import checkInput from './stdio/dataValidation.js';
+import url from 'url';
 
 //Wrap readline.question with Promise, then later we can use await to call them sequentially
 const askQuestion = (question) => {
@@ -97,6 +98,8 @@ const main = async () => {
   process.exit(0);
 }
 
-main();
+if (import.meta.url === url.pathToFileURL(process.argv[1]).href) {
+  main();
+}
 
 export default main;
